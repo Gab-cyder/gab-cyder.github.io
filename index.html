@@ -1,104 +1,219 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>La Ruta del Café - Tingo María</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f5f0;
-      color: #4e342e;
-    }
-    header {
-      background-color: #3e2723;
-      color: #fff;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-    nav {
-      background-color: #6d4c41;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background-image: url('https://source.unsplash.com/1600x600/?coffee,shop');
-      background-size: cover;
-      background-position: center;
-      padding: 4rem 2rem;
-      text-align: center;
-      color: white;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section h2 {
-      color: #5d4037;
-    }
-    .footer {
-      background-color: #3e2723;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Ruta del Café - Tingo María</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f5f0;
+        }
+        
+        header {
+            background-color: #3e2723;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #5d4037;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1445116572660-236099ec97a0');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 5px;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        footer {
+            background-color: #3e2723;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            .hero {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>La Ruta del Café</h1>
-    <p>Tu parada obligatoria en Tingo María</p>
-  </header>
-
-  <nav>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <div class="hero">
-    <h1>Sabores únicos del Alto Huallaga</h1>
-    <p>Descubre nuestra pasión por el café y el chocolate artesanal</p>
-  </div>
-
-  <section class="section" id="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>
-      En <strong>La Ruta del Café</strong> combinamos la experiencia de una cafetería con la tradición cafetalera de Tingo María. Ofrecemos bebidas especiales, chocolate con sabores como yerba luisa y panela, y productos derivados del café directamente desde nuestra fábrica.
-    </p>
-  </section>
-
-  <section class="section" id="servicios">
-    <h2>Servicios</h2>
-    <ul>
-      <li>Café de especialidad</li>
-      <li>Chocolate artesanal en sabores únicos</li>
-      <li>Bombas de chocolate con marshmallow y manjar</li>
-      <li>Visitas guiadas a la fábrica (previa cita)</li>
-    </ul>
-  </section>
-
-  <section class="section" id="contacto">
-    <h2>Contacto</h2>
-    <p>📍 Tingo María, Huánuco - Perú</p>
-    <p>📞 +51 987 654 321</p>
-    <p>📧 larutadelcafe@correo.pe</p>
-  </section>
-
-  <footer class="footer">
-    <p>© 2025 La Ruta del Café | Diseñado con ☕ en Tingo María</p>
-  </footer>
+    <header>
+        <div class="container">
+            <h1>La Ruta del Café</h1>
+            <p>Descubre el auténtico sabor del café de Tingo María</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>El mejor café de la región</h2>
+            <p>Cultivado con pasión en las tierras de Tingo María</p>
+            <a href="#productos" style="color: #ffab40; font-weight: bold;">Ver nuestros productos</a>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5');"></div>
+                    <div class="product-info">
+                        <h3>Café Molido Tradicional</h3>
+                        <p>Café 100% arábica, tostado artesanalmente para resaltar sus notas achocolatadas.</p>
+                        <p><strong>Precio:</strong> S/ 25.00 (250g)</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5');"></div>
+                    <div class="product-info">
+                        <h3>Café en Grano Premium</h3>
+                        <p>Selección especial de granos AA, con notas frutales y floral.</p>
+                        <p><strong>Precio:</strong> S/ 35.00 (250g)</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5');"></div>
+                    <div class="product-info">
+                        <h3>Café Instantáneo Orgánico</h3>
+                        <p>Para los amantes del café práctico sin sacrificar calidad.</p>
+                        <p><strong>Precio:</strong> S/ 20.00 (100g)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>La Ruta del Café nace en el corazón de Tingo María, donde las condiciones climáticas y la tierra fértil producen uno de los mejores cafés del Perú.</p>
+            <p>Somos una empresa familiar que por más de 20 años se ha dedicado al cultivo y procesamiento artesanal del café, manteniendo siempre los más altos estándares de calidad.</p>
+            <p>Nuestra misión es llevar el auténtico sabor del café tingalés a cada hogar, preservando las técnicas tradicionales mientras innovamos en nuestros procesos.</p>
+        </section>
+        
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Visítanos en nuestra tienda:</p>
+            <address>
+                Av. Cafetalera 123<br>
+                Tingo María, Huánuco<br>
+                Perú
+            </address>
+            <p>Teléfono: +51 987 654 321</p>
+            <p>Email: info@larutadelcafe.com</p>
+            <p>Horario de atención: Lunes a Sábado de 8:00 am a 6:00 pm</p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 La Ruta del Café - Todos los derechos reservados</p>
+            <p>Síguenos en redes sociales: 
+                <a href="#" style="color: #ffab40;">Facebook</a> | 
+                <a href="#" style="color: #ffab40;">Instagram</a> | 
+                <a href="#" style="color: #ffab40;">Twitter</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
